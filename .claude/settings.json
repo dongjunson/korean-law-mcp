@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node --input-type=module -e ' *)",
+      "Bash(curl -s https://api.ipify.org)",
+      "Bash(curl -s https://icanhazip.com)",
+      "Bash(curl -s https://ifconfig.co)",
+      "Bash(curl -s -6 https://api64.ipify.org)"
+    ]
+  }
+}
