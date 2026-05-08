@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>법령 리서치 어시스턴트</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header>
+    <div class="title">법령 리서치 어시스턴트</div>
+    <div class="subtitle">법조 실무자용 · 법제처 1차 자료 기반</div>
+  </header>
+
+  <main id="messages" aria-live="polite"></main>
+
+  <footer>
+    <form id="chat-form">
+      <textarea id="input" rows="2" placeholder="법령·판례·해석례 질문을 입력하세요. (Shift+Enter 줄바꿈, Enter 전송)" required></textarea>
+      <button type="submit" id="send">전송</button>
+    </form>
+    <div class="disclaimer">※ 본 응답은 참고용 정보 제공이며 개별 사안의 법률 자문이 아닙니다.</div>
+  </footer>
+
+  <template id="msg-tpl">
+    <article class="msg">
+      <div class="role"></div>
+      <div class="body"></div>
+      <details class="trace" hidden>
+        <summary>도구 호출 추적 (<span class="trace-count">0</span>건)</summary>
+        <div class="trace-list"></div>
+      </details>
+    </article>
+  </template>
+
+  <script type="module" src="./chat.js"></script>
+</body>
+</html>
